@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <script src="https://kit.fontawesome.com/e01677a071.js"></script>
+    <style>
+        :root{
+            --color-black:rgba(0,0,0,0.92);
+            --color-text-primary:#f5f5f7;
+        }
+        
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        
+        html{
+            font-size:66%;
+        }
+        
+        @font-face {
+	    font-family:'SF Pro Text';
+	    font-weight:lighter;
+	    src:url("sf-pro-text_regular.woff2") format("woff");
+        font-style:normal;
+     }
+        @font-face {
+	    font-family:'SF Pro Text Bold';
+	    font-style:normal;
+	    font-weight:bold;
+	    src:url("sf-pro-text_bold.woff2") format("woff");
+     }
+        body{
+            position:relative;
+            font-family:'SF Pro Text';
+            position:relative;
+            overflow:hidden;  
+/*             Change it Later Just do it for clearing out extra flow :) */
+        }
+
+        .header{
+            background-image:linear-gradient(to right,var(--color-black),var(--color-black));
+            color:var(--color-text-primary);
+            
+        }
+        .header__list,
+        .list{
+            list-style:none;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            max-width:1200px;
+            margin:0 auto;
+        }
+        .list__item{
+            padding:0.5rem;
+            font-size:1.4rem;
+        }
+        .list__item-selected{
+            opacity:0.56;
+        }
+        .logo{
+            width:35px;
+        }
+        
+        .hero{
+            display:flex;
+            justify-content:space-between;
+/*            max-width:1200px;*/
+            margin:0 auto;
+            align-items:center;
+            padding-left:15rem;
+            position:absolute;
+            top:0;
+            left:0;
+            margin-top:10rem;
+
+        }
+        .hero-text,
+        .hero-biggy{
+            flex-basis:50%;
+            
+        }
+        .hero-headline{
+            font-size:4.8rem;
+            font-family:'SF Pro Text Bold';
+            margin-bottom:3rem;
+                
+        }
+        .hero-visual{
+            width:10rem;
+        }
+        .hero-img{
+            width:120%;
+            
+        }
+        a{
+            text-decoration:none;
+            font-family:inherit;
+            color:var(--color-black);
+            font-size:1.4rem;
+        }
+        a:visited,
+        a:active{
+            color:currentColor;
+        }
+        .hero__cta-try-free{
+            padding:1rem 1.5rem;
+            border-radius:10rem;
+            margin-right:2rem;
+            background-color:var(--color-text-primary);
+        }
+        .hero-biggy{
+            overflow:hidden;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+       <ul class="header__list list">
+           <li class="list__item"><img src="logo.png" alt="" class="logo"></li>
+           <li class="list__item">Mac</li>
+           <li class="list__item">iPad</li>
+           <li class="list__item">iPhone</li>
+           <li class="list__item">Watch</li>
+           <li class="list__item">TV</li>
+           <li class="list__item list__item-selected">Music</li>
+           <li class="list__item">Support</li>
+           <li class="list__item">Where to Buy</li>
+           <li class="list__item"><i class="fas fa-search"></i></li>
+       </ul>    
+    </header>
+    <canvas id="main"></canvas>
+    <section class="hero">
+
+        <div class="hero-text">
+            <img src="apple_music.png" alt="" class="hero-visual">
+            <p class="hero-headline">Lose yourself in 60 million songs.</p>
+            <div class="hero__cta">
+                <a href="#" class="hero__cta-try-free">Try it free*</a>
+                <a href="#" class="hero__cta-learn-more">Learn more &rarr;</a>
+            </div>
+        </div>
+        <div class="hero-biggy">
+            <img src="hero_ipad.png" alt="" class="hero-img">
+        </div>
+        
+    </section>
+    <script src="canvas1.js"></script>
+</body>
+</html>
