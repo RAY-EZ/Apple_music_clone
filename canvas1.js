@@ -66,7 +66,7 @@ let canvas = document.getElementById('main');
         }
         let circles = [];
 
-        for(let i=0;i<20;i++){
+        for(let i=0;i<40;i++){
             let circOjb = new Circle(random(maxRadii,width-maxRadii),random(maxRadii,height-maxRadii),
             Math.floor(Math.random() * 5+1)-3,
             Math.floor(Math.random() * 5+1)-3,
