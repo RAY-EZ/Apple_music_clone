@@ -8,7 +8,7 @@ let canvas = document.getElementById('main');
         let y = Math.random() * height;
         let velX = 3;
         let velY = 3;
-        let maxRadii = 900;
+        let maxRadii = 1200;
 
         const COLORS = [
             {r:229, g:50, b:130},
