@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Canvas</title>
     <script src="https://kit.fontawesome.com/e01677a071.js"></script>
+    
+    <!--- Style --->
     <style>
         :root{
             --color-black:rgba(0,0,0,0.92);
@@ -24,14 +26,14 @@
         @font-face {
 	    font-family:'SF Pro Text';
 	    font-weight:lighter;
-	    src:url("sf-pro-text_regular.woff2") format("woff");
+	    src:url("./fonts/sf-pro-text_regular.woff2") format("woff");
         font-style:normal;
      }
         @font-face {
 	    font-family:'SF Pro Text Bold';
 	    font-style:normal;
 	    font-weight:bold;
-	    src:url("sf-pro-text_bold.woff2") format("woff");
+	    src:url("fonts/sf-pro-text_bold.woff2") format("woff");
      }
         body{
             position:relative;
@@ -121,7 +123,7 @@
 <body>
     <header class="header">
        <ul class="header__list list">
-           <li class="list__item"><img src="logo.png" alt="" class="logo"></li>
+           <li class="list__item"><img src="img/logo.png" alt="" class="logo"></li>
            <li class="list__item">Mac</li>
            <li class="list__item">iPad</li>
            <li class="list__item">iPhone</li>
@@ -137,7 +139,7 @@
     <section class="hero">
 
         <div class="hero-text">
-            <img src="apple_music.png" alt="" class="hero-visual">
+            <img src="img/apple_music.png" alt="" class="hero-visual">
             <p class="hero-headline">Lose yourself in 60 million songs.</p>
             <div class="hero__cta">
                 <a href="#" class="hero__cta-try-free">Try it free*</a>
@@ -145,10 +147,10 @@
             </div>
         </div>
         <div class="hero-biggy">
-            <img src="hero_ipad.png" alt="" class="hero-img">
+            <img src="img/hero_ipad.png" alt="" class="hero-img">
         </div>
         
     </section>
-    <script src="canvas1.js"></script>
+    <script src="js/canvas1.js"></script>
 </body>
 </html>
