@@ -1,4 +1,6 @@
 let canvas = document.getElementById('main');
+
+
     let width = canvas.width = innerWidth;
     let height = canvas.height = innerHeight- 48;
     let ctx = canvas.getContext('2d');
@@ -18,6 +20,11 @@ let canvas = document.getElementById('main');
             {r: 47, g: 89, b: 167},
             {r: 24, g: 57, b: 141}
         ];
+
+window.addEventListener('resize',()=>{
+                        canvas.height= innerHeight-48;
+                        canvas.width = innerWidth;
+                        });
 
         let colorC =0;
         function random(min, max) {

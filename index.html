@@ -46,7 +46,46 @@
         .header{
             background-image:linear-gradient(to right,var(--color-black),var(--color-black));
             color:var(--color-text-primary);
+            padding-right:1rem;
             
+        }
+        .header-container{
+            max-width:1200px;
+            display:flex;
+            margin:0 auto;
+            align-items:center;
+            justify-content:space-between;
+            
+            
+        }
+        @media (max-width:31.25em){
+            .header__list > [class$='sub']{
+                display:none;
+            }
+        }
+        
+        .header-hamburger{
+            height:2px;
+            width:2.5rem;
+            background-color:var(--color-text-primary);
+            display:none;
+        }
+        @media (max-width:31.25em){
+            .header-hamburger{display:block;}
+        }
+        .header-hamburger::before,
+        .header-hamburger::after{
+            content:"";
+            height:100%;
+            width:100%;
+            background-color:currentColor;
+            display:block;
+        }
+        .header-hamburger::after{
+            transform:translateY(.6rem);
+        }
+        .header-hamburger::before{
+            transform:translateY(-.7rem);
         }
         .header__list,
         .list{
@@ -54,8 +93,7 @@
             display:flex;
             align-items:center;
             justify-content:space-between;
-            max-width:1200px;
-            margin:0 auto;
+            flex-grow:1;
         }
         .list__item{
             padding:0.5rem;
@@ -65,7 +103,7 @@
             opacity:0.56;
         }
         .logo{
-            width:35px;
+            width:30px;
         }
         
         .hero{
@@ -81,10 +119,22 @@
             margin-top:10rem;
 
         }
+        
         .hero-text,
         .hero-biggy{
             flex-basis:50%;
+        }
+        @media (max-width:31.25em){
+            .hero{
+                flex-direction:column;
+                padding:2rem;
+                justify-content:space-between;
+                height:95%;
             
+            }
+            .hero-text{
+                padding:3rem;
+            }
         }
         .hero-headline{
             font-size:4.8rem;
@@ -98,6 +148,11 @@
         .hero-img{
             width:120%;
             
+        }
+        @media (max-width:31.25em){
+            .hero-img{
+                width:100%;
+            }
         }
         a{
             text-decoration:none;
@@ -122,18 +177,22 @@
 </head>
 <body>
     <header class="header">
+     <div class="header-container">
        <ul class="header__list list">
            <li class="list__item"><img src="img/logo.png" alt="" class="logo"></li>
-           <li class="list__item">Mac</li>
-           <li class="list__item">iPad</li>
-           <li class="list__item">iPhone</li>
-           <li class="list__item">Watch</li>
-           <li class="list__item">TV</li>
-           <li class="list__item list__item-selected">Music</li>
-           <li class="list__item">Support</li>
-           <li class="list__item">Where to Buy</li>
-           <li class="list__item"><i class="fas fa-search"></i></li>
-       </ul>    
+           <li class="list__item sub">Mac</li>
+           <li class="list__item sub">iPad</li>
+           <li class="list__item sub">iPhone</li>
+           <li class="list__item sub">Watch</li>
+           <li class="list__item sub">TV</li>
+           <li class="list__item list__item-selected sub">Music</li>
+           <li class="list__item sub">Support</li>
+           <li class="list__item sub">Where to Buy</li>
+           <li class="list__item sub"><i class="fas fa-search"></i></li>
+       </ul> 
+       <div class="header-hamburger">
+       </div> 
+     </div>
     </header>
     <canvas id="main"></canvas>
     <section class="hero">
